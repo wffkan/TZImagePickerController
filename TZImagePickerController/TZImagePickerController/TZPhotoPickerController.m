@@ -115,6 +115,9 @@ static CGFloat itemMargin = 5;
     
     self.operationQueue = [[NSOperationQueue alloc] init];
     self.operationQueue.maxConcurrentOperationCount = 3;
+    if (_showCameraFirst) {
+        [self takePhoto];
+    }
 }
 
 - (void)fetchAssetModels {
